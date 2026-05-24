@@ -12,8 +12,10 @@ An autonomous multi-agent system that audits, fixes, and completes<br>your softw
 [![Agents](https://img.shields.io/badge/Agents-12-orange)](.claude/agents)
 [![Tools](https://img.shields.io/badge/Works%20With-12%2B%20Tools-brightgreen)](#-compatibility)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen.svg)](SECURITY.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-[Getting Started](#-getting-started) · [How It Works](#-how-it-works) · [The Squad](#-the-squad) · [Examples](#-example-output) · [Contributing](#-contributing)
+[Getting Started](#-getting-started) · [How It Works](#-how-it-works) · [The Squad](#-the-squad) · [Examples](#-example-output) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) · [Code of Conduct](CODE_OF_CONDUCT.md)
 
 </div>
 
