@@ -156,7 +156,10 @@ Everything in audit mode, plus **intent reconstruction**. The Manager analyzes y
 
 ## ⚙️ How It Works
 
-```
+<table>
+<tr>
+<td align="left">
+<pre>
                ┌─────────────────────┐
                │     /f9-audit or     │
                │     /f9-complete     │
@@ -193,7 +196,10 @@ Everything in audit mode, plus **intent reconstruction**. The Manager analyzes y
                └─────────────────────┘
 
          * Intent Map is --complete mode only
-```
+</pre>
+</td>
+</tr>
+</table>
 
 </div>
 

@@ -1,5 +1,5 @@
-# /f9-complete
+---
+description: Run False9 in complete mode to reconstruct intent and automatically fix issues
+---
 
-Trigger the False9 Manager in complete mode.
-
-Use Task to spawn `.claude/agents/f9-manager.md` with mode: `--complete`.
+Run the `f9-manager` agent in complete mode. Spawn `.claude/agents/f9-manager.md` with mode set to `--complete`.
