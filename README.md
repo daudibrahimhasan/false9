@@ -1,127 +1,213 @@
 <div align="center">
 
+<br>
+
 ```
-╔═══════════════════════════════════════════════════════════╗
-║                                                           ║
-║   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   ║
-║   ░  ·  ·  ○  ·  ·  ·  · │ ·  ·  ·  ·  ●  ·  ·  ·  ░   ║
-║   ░  ·  ●  ·  ·  ●  ·  · │ ·  ·  ○  ·  ·  ·  ○  ·  ░   ║
-║   ░  ·  ·  ·  ·  ·  ○  · │ ·  ·  ·  ·  ·  ●  ·  ·  ░   ║
-║   ░  ·  ·  ●  ·  ·  ·  · │ ·  ·  ·  ○  ·  ·  ·  ·  ░   ║
-║   ░·····················(✦)·····················░   ║
-║   ░  ·  ·  ○  ·  ·  ·  · │ ·  ·  ·  ·  ●  ·  ·  ·  ░   ║
-║   ░  ·  ●  ·  ·  ●  ·  · │ ·  ·  ○  ·  ·  ·  ○  ·  ░   ║
-║   ░  ·  ·  ·  ·  ·  ○  · │ ·  ·  ·  ·  ·  ●  ·  ·  ░   ║
-║   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   ║
-║                                                           ║
-║              F  A  L  S  E  9                             ║
-║       Total football for your codebase.                   ║
-║                                                           ║
-║            ● White  ○ Red  ✦ Ball                        ║
-╚═══════════════════════════════════════════════════════════╝
+    ┌─────────────────────────────────────────────────┐
+    │  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
+    │  ░  ·  ○  ·  ·  ·  · │ ·  ·  ·  ●  ·  ·  ·  ░  │
+    │  ░  ●  ·  ·  ●  ·  · │ ·  ○  ·  ·  ·  ○  ·  ░  │
+    │  ░  ·  ·  ·  ·  ○  · │ ·  ·  ·  ·  ●  ·  ·  ░  │
+    │  ░··················(✦)··················░  │
+    │  ░  ·  ○  ·  ·  ·  · │ ·  ·  ·  ●  ·  ·  ·  ░  │
+    │  ░  ●  ·  ·  ●  ·  · │ ·  ○  ·  ·  ·  ○  ·  ░  │
+    │  ░  ·  ·  ·  ·  ○  · │ ·  ·  ·  ·  ●  ·  ·  ░  │
+    │  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
+    └─────────────────────────────────────────────────┘
 ```
+
+# False9
+
+**Total football for your codebase.**
+
+An autonomous multi-agent system that audits, fixes, and completes<br>your software projects — all inside [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Built%20for-Claude%20Code-blueviolet)](https://docs.anthropic.com/en/docs/claude-code)
+[![Agents](https://img.shields.io/badge/Agents-12-orange)](.claude/agents)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+[Getting Started](#-getting-started) · [How It Works](#-how-it-works) · [The Squad](#-the-squad) · [Examples](#-example-output) · [Contributing](#-contributing)
 
 </div>
 
 ---
 
-An autonomous AI engineering organization that lives inside Claude Code.  
-Audits and completes software projects.
-
----
-
 ## The Problem
 
-You have projects in various states of broken. Half made. Partially made. Full but with broken features. LLM calls not working. Placeholder content. No army to fix it.
+Every engineering team has them: projects in various states of *broken*. Half-built features. Placeholder copy. API routes that don't match the frontend. LLM integrations returning garbage. Security holes nobody audited. Tests that pass but catch nothing.
 
-False9 is the army.
+You don't have the bandwidth to fix it all. You certainly don't have a team of 11 specialists to deploy simultaneously.
 
----
+**False9 is that team.**
 
-## What It Does
-
-One command. 11 agents spawn simultaneously. Every domain covered in parallel. Final scored report written to your project root.
-
-```
-/f9-audit      → full engineering review + fix everything found
-/f9-complete   → reconstruct intent + complete unfinished work + audit
-```
+Named after the football tactic where a striker drops deep to orchestrate play from every position on the pitch, False9 has no fixed role — it analyzes the entire playing field and deploys a specialized squad of domain experts in parallel.
 
 ---
 
-## The Squad
+## ✨ Features
 
-| # | Agent | Domain |
-|---|-------|--------|
-| 1 | Manager | Orchestrates everything |
-| 2 | Code Quality Judge | Dead code, structure, patterns |
-| 3 | Backend Engineer | APIs, auth, validation, missing endpoints |
-| 4 | Database Specialist | Queries, indexes, transactions, scale |
-| 5 | Security Guard | Secrets, injections, IDOR, data flow |
-| 6 | Frontend Architect | UI completion, wiring, placeholders |
-| 7 | Performance Beast | Leaks, bundles, perceived load time |
-| 8 | Testing Captain | Coverage, flaky tests, behavioral assertions |
-| 9 | LLM Validator | Tests AI features do the RIGHT thing |
-| 10 | DevOps Engineer | Cold deploy simulation, Docker, env vars |
-| 11 | Innovation Consultant | Quick wins, revenue gaps, AI opportunities |
-| 12 | Synthesizer | Cross-references all findings, final report |
+- **🔍 Full-Stack Audit** — One command triggers 11 specialized agents across your entire codebase
+- **🧠 Intent Reconstruction** — Reads your README, TODOs, git history, route patterns, and `.env` templates to understand what you *meant* to build
+- **⚡ Parallel Execution** — All agents run simultaneously, not sequentially
+- **🔒 Security-First** — Traces actual data flow, catches IDOR, logic-level auth bypass, and leaked secrets
+- **🤖 LLM Validation** — Doesn't just check if your AI features run — tests if they produce the *right* output
+- **📊 Scored Report** — Every domain scored 0–100 with a production-readiness percentage
+- **🛠️ Auto-Fix** — In `--complete` mode, agents don't just find problems — they fix them
+- **🔄 Cross-Reference Escalation** — Issues flagged by multiple agents are automatically escalated in severity
+- **✅ Fix Verification** — Scores only improve when fixes are verified, never inflated
 
 ---
 
-## Install
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed and configured
+
+### Installation
+
+Clone the repository:
 
 ```bash
-cp -r .claude/commands/f9-* ~/.claude/commands/
-cp -r .claude/agents/f9-* ~/.claude/agents/
+git clone https://github.com/daudibrahimhasan/false9.git
 ```
 
-Requires [Claude Code](https://claude.ai/code).
+Copy the agents and commands into your Claude Code configuration:
 
----
+```bash
+# Copy commands
+cp -r false9/.claude/commands/f9-* ~/.claude/commands/
 
-## Usage
+# Copy agents
+cp -r false9/.claude/agents/f9-* ~/.claude/agents/
+```
 
-Open any project in Claude Code and run:
+That's it. No dependencies. No build step. No config files.
+
+### Quick Start
+
+Open **any project** in Claude Code and run:
 
 ```
 /f9-audit
 ```
 
-or
+Your project will be analyzed, issues will be identified and fixed, and a comprehensive report will be generated at `false9_report.md`.
+
+---
+
+## 🎯 Execution Modes
+
+### Audit Mode
+
+```
+/f9-audit
+```
+
+Deploys the full squad to evaluate your codebase. Identifies issues across all domains, applies fixes, and compiles a scored audit report. Best for existing projects you want to harden.
+
+### Complete Mode
 
 ```
 /f9-complete
 ```
 
-Report is written to `false9_report.md` in your project root.
+Everything in audit mode, plus **intent reconstruction**. The Manager analyzes your git history, README, TODOs, route patterns, and environment templates to build an Intent Map — a blueprint of what your project is *supposed* to be. Agents then complete unfinished features, wire disconnected UI elements, and build missing endpoints. Best for half-finished projects.
 
 ---
 
-## How It Works
+## ⚙️ How It Works
 
 ```
-/f9-audit
-    ↓
-Manager: project recon + stack detection
-    ↓
-11 agents spawn simultaneously
-Each reads its domain, fixes what it finds, reports
-    ↓
-Synthesizer: cross-references all findings
-Escalates issues flagged by multiple agents
-Verifies fixes before scoring
-    ↓
-false9_report.md + terminal scorecard
+                          ┌─────────────────────┐
+                          │     /f9-audit or     │
+                          │     /f9-complete     │
+                          └──────────┬──────────┘
+                                     │
+                          ┌──────────▼──────────┐
+                          │   Manager (#1)       │
+                          │   Project Recon      │
+                          │   Stack Detection    │
+                          │   Intent Map*        │
+                          └──────────┬──────────┘
+                                     │
+               ┌─────────────────────┼─────────────────────┐
+               │                     │                     │
+     ┌─────────▼──────┐   ┌─────────▼──────┐   ┌─────────▼──────┐
+     │ Code Quality   │   │ Backend        │   │ Database       │
+     │ Security       │   │ Frontend       │   │ Performance    │
+     │ Testing        │   │ LLM Validator  │   │ DevOps         │
+     │ Innovation     │   │                │   │                │
+     └─────────┬──────┘   └─────────┬──────┘   └─────────┬──────┘
+               │                     │                     │
+               └─────────────────────┼─────────────────────┘
+                                     │
+                          ┌──────────▼──────────┐
+                          │  Synthesizer (#12)   │
+                          │  Cross-reference     │
+                          │  Verify fixes        │
+                          │  Generate report     │
+                          └──────────┬──────────┘
+                                     │
+                          ┌──────────▼──────────┐
+                          │  false9_report.md    │
+                          │  Terminal Scorecard  │
+                          └─────────────────────┘
+
+                          * Intent Map is --complete mode only
 ```
+
+### Phase 1 — Recon
+
+The **Manager** performs a lightning-fast analysis of your project: stack, frameworks, database, LLM integrations. It intelligently skips irrelevant agents (no database → skip Database Specialist; no LLM calls → skip LLM Validator).
+
+### Phase 2 — Intent Reconstruction *(complete mode only)*
+
+The Manager inspects git logs, README, TODOs/FIXMEs, route names, component stubs, nav links pointing to missing pages, frontend fetch calls with no matching backend route, and `.env.example` keys. It builds an **Intent Map**: what's done, what's unfinished, what's missing-but-implied.
+
+### Phase 3 — Parallel Agent Execution
+
+All relevant agents spawn **simultaneously**. Each operates independently within its domain:
+
+- Reads the codebase summary and relevant code paths
+- Diagnoses structural issues, bugs, and gaps
+- Applies targeted fixes without interfering with other agents
+- Reports findings with severity ratings
+
+### Phase 4 — Synthesis & Verification
+
+The **Synthesizer** reads all agent findings, cross-references them (escalating severity for files flagged by multiple agents), verifies that fixes actually resolve the underlying issues, and compiles the final scorecard and `false9_report.md`.
 
 ---
 
-## Output
+## 👥 The Squad
+
+| # | Agent | Domain | Strategy |
+|:---:|:---|:---|:---|
+| **1** | **Manager** | Orchestration | Recon, intent maps, spawns everyone simultaneously. Never audits code itself. |
+| **2** | **Code Quality Judge** | Structure & Patterns | TypeScript errors, dead code, god files, code smells. Writes `codebase_summary` that all other agents depend on. |
+| **3** | **Backend Engineer** | APIs & Validation | Diffs frontend fetch calls against existing routes. Builds every missing endpoint. Simulates a client for each route. |
+| **4** | **Database Specialist** | Queries & Scale | Every query evaluated at 100K rows. Indexes, transaction boundaries, N+1 detection. |
+| **5** | **Security Guard** | Vulnerabilities & Data Flow | Traces `Input → Handler → Validation → DB → Response`. IDOR checks, secret scanning, auth bypass detection. Zero tolerance for critical issues. |
+| **6** | **Frontend Architect** | UI Completion | Completes stub components, wires disconnected buttons/forms to APIs, replaces placeholder content. Never touches design decisions. |
+| **7** | **Performance Beast** | Speed & Efficiency | Simulates slow 3G connections. Memory leaks, heavy imports, missing debounce, waterfall API calls, skeleton screens. |
+| **8** | **Testing Captain** | Test Quality | For each test: *"If I deleted this feature, would this test fail?"* Rewrites snapshot abuse, fixes flaky tests, adds behavioral assertions. |
+| **9** | **LLM Validator** | AI Feature Correctness | 5-test suite per LLM call (normal, short, long, empty, adversarial). Scores relevance, accuracy, format, safety. Fixes prompts, parsers, and error handling. |
+| **10** | **DevOps Engineer** | Deploy Readiness | Simulates a cold deploy step-by-step: clone → install → env → build → start → health check. Finds every step that would fail. |
+| **11** | **Innovation Consultant** | Opportunity Mining | Finds features that are 80% built, installed-but-unused libraries, data models with untapped potential. Only suggests quick wins. |
+| **12** | **Synthesizer** | Final Report | Cross-references all findings. Verifies fixes. Escalates overlapping issues. Writes `false9_report.md` and terminal scorecard. |
+
+---
+
+## 📊 Example Output
+
+After a run completes, you'll see this in your terminal:
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   FALSE9 AUDIT COMPLETE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   Code Quality    81/100  ✅
   Backend         79/100  ✅
   Database        78/100  ✅
@@ -139,21 +225,105 @@ false9_report.md + terminal scorecard
   High fixed:      8
 
   Full report → false9_report.md
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+The full report (`false9_report.md`) includes:
+
+- **Scorecard** — Per-domain scores with status indicators
+- **Critical Fixed** — Security vulnerabilities, data leaks, auth bypasses resolved
+- **High Fixed** — Missing endpoints, broken integrations, dead code removed
+- **Cross-Cutting Issues** — Problems flagged by multiple agents (auto-escalated)
+- **Needs Human Review** — Decisions that require human judgment
+- **Innovation Opportunities** — Quick wins and revenue gaps
+- **Before vs After** — Concrete metrics showing improvement
+
+---
+
+## 🏗️ Project Structure
+
+```
+false9/
+├── README.md
+└── .claude/
+    ├── commands/
+    │   ├── f9-audit.md          # Trigger audit mode
+    │   └── f9-complete.md       # Trigger complete mode
+    └── agents/
+        ├── f9-manager.md        # The Brain — orchestration & recon
+        ├── f9-code-quality.md   # Code Quality Judge
+        ├── f9-backend.md        # Backend Engineer
+        ├── f9-database.md       # Database Specialist
+        ├── f9-security.md       # Security Guard
+        ├── f9-frontend.md       # Frontend Architect
+        ├── f9-performance.md    # Performance Beast
+        ├── f9-testing.md        # Testing Captain
+        ├── f9-llm-validator.md  # LLM Validator
+        ├── f9-devops.md         # DevOps Engineer
+        ├── f9-innovation.md     # Innovation Consultant
+        └── f9-synthesizer.md    # Synthesizer — final report
 ```
 
 ---
 
-## What Makes It Different
+## 💡 What Makes False9 Different
 
-Most tools check if your code runs. False9 checks if it does the right thing.
+Most tools check if your code **runs**. False9 checks if it does the **right thing**.
 
-- **LLM Validator** runs live tests — not just "API returns 200" but "is this the correct output?"
-- **Security Guard** traces data flow — finds IDOR and logic-level auth flaws no scanner catches
-- **Backend Engineer** simulates a client — verifies response shapes match what the frontend expects
-- **DevOps Engineer** simulates a cold deploy — finds exactly which step would fail
-- **Synthesizer** cross-references — issues flagged by multiple agents get escalated automatically
+| Traditional Tools | False9 |
+|:---|:---|
+| Lints syntax errors | Traces execution paths and finds dead logic |
+| Runs `npm audit` | Traces data flow from input to database to response |
+| Checks if API returns 200 | Verifies response shape matches what the frontend destructures |
+| Measures test coverage % | Asks *"if I deleted this feature, would any test fail?"* |
+| Checks if LLM call succeeds | Runs 5-point test suite including adversarial inputs |
+| Validates Dockerfile syntax | Simulates a full cold deploy and finds which step breaks |
+| Suggests "add tests" | Writes behavioral tests for auth flows, form submissions, and error states |
 
 ---
 
-*False9. Total football for your codebase.*
+## 🗺️ Roadmap
+
+- [ ] **VS Code Extension** — Run False9 directly from the editor
+- [ ] **CI/CD Integration** — GitHub Action for automated audits on every PR
+- [ ] **Custom Agent SDK** — Build and plug in your own domain-specific agents
+- [ ] **Multi-Language Support** — Python, Go, Rust backend detection
+- [ ] **Dashboard** — Visual audit history and trend tracking
+- [ ] **Team Mode** — Assign human reviewers to flagged issues
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! False9 is designed to be extended.
+
+### Adding a New Agent
+
+1. Create a new file in `.claude/agents/` following the naming convention `f9-{domain}.md`
+2. Define: **RECON** (what to scan), **FIX** (what to repair), **OUTPUT** (structured JSON report)
+3. Add the agent to the spawn list in `f9-manager.md`
+4. Add the agent's domain to the Synthesizer's verification pass
+5. Submit a PR
+
+### Guidelines
+
+- Each agent must be fully self-contained — no dependencies between agents
+- Follow the existing output JSON schema for compatibility with the Synthesizer
+- Agents should fix issues, not just report them
+- Never inflate scores — only count verified fixes
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**False9** — *No fixed position. Reviews everything.*
+
+Built by [Daud Ibrahim Hasan](https://github.com/daudibrahimhasan)
+
+</div>
