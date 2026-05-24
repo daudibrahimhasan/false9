@@ -18,7 +18,7 @@
 
 # False9
 
-**Total football for your codebase.**
+**The dream team you never had.**
 
 An autonomous multi-agent system that audits, fixes, and completes<br>your software projects — all inside [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
@@ -33,11 +33,12 @@ An autonomous multi-agent system that audits, fixes, and completes<br>your softw
 
 ---
 
-## The Problem
+## Why This Exists
 
-Every engineering team has them: projects in various states of *broken*. Half-built features. Placeholder copy. API routes that don't match the frontend. LLM integrations returning garbage. Security holes nobody audited. Tests that pass but catch nothing.
+I had 28 projects. Some half-built. Some 10% done. 
+Some fully built but broken in ways I couldn't track down alone.
 
-You don't have the bandwidth to fix it all. You certainly don't have a team of 11 specialists to deploy simultaneously.
+I needed a team. So I built one.
 
 **False9 is that team.**
 
