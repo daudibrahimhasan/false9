@@ -1,0 +1,14 @@
+# False9 — Cursor Rules
+
+This project uses the False9 multi-agent audit and completion system.
+Load agent definitions from `.cursor/agents/` as custom agent instructions.
+
+## Agents
+
+Each agent in `.cursor/agents/` is a self-contained specialist.
+Use them as system prompts or custom instructions for domain-specific code review.
+
+## Commands
+
+- `/f9-audit` — Deploy all agents for a full engineering audit
+- `/f9-complete` — Reconstruct intent, complete unfinished work, then audit

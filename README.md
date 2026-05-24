@@ -2,29 +2,15 @@
 
 <br>
 
-```
-    ┌─────────────────────────────────────────────────┐
-    │  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
-    │  ░  ·  ○  ·  ·  ·  · │ ·  ·  ·  ●  ·  ·  ·  ░  │
-    │  ░  ●  ·  ·  ●  ·  · │ ·  ○  ·  ·  ·  ○  ·  ░  │
-    │  ░  ·  ·  ·  ·  ○  · │ ·  ·  ·  ·  ●  ·  ·  ░  │
-    │  ░··················(✦)··················░  │
-    │  ░  ·  ○  ·  ·  ·  · │ ·  ·  ·  ●  ·  ·  ·  ░  │
-    │  ░  ●  ·  ·  ●  ·  · │ ·  ○  ·  ·  ·  ○  ·  ░  │
-    │  ░  ·  ·  ·  ·  ○  · │ ·  ·  ·  ·  ●  ·  ·  ░  │
-    │  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
-    └─────────────────────────────────────────────────┘
-```
-
 # False9
 
 **The dream team you never had.**
 
-An autonomous multi-agent system that audits, fixes, and completes<br>your software projects — all inside [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+An autonomous multi-agent system that audits, fixes, and completes<br>your software projects from any AI-powered coding environment.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Built%20for-Claude%20Code-blueviolet)](https://docs.anthropic.com/en/docs/claude-code)
 [![Agents](https://img.shields.io/badge/Agents-12-orange)](.claude/agents)
+[![Tools](https://img.shields.io/badge/Works%20With-12%2B%20Tools-brightgreen)](#-compatibility)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 [Getting Started](#-getting-started) · [How It Works](#-how-it-works) · [The Squad](#-the-squad) · [Examples](#-example-output) · [Contributing](#-contributing)
@@ -40,7 +26,7 @@ Some fully built but broken in ways I couldn't track down alone.
 
 I needed a team. So I built one.
 
-**False9 is that team.**
+**False9 is that team.** *The dream team you never had.*
 
 Named after the football tactic where a striker drops deep to orchestrate play from every position on the pitch, False9 has no fixed role — it analyzes the entire playing field and deploys a specialized squad of domain experts in parallel.
 
@@ -64,7 +50,7 @@ Named after the football tactic where a striker drops deep to orchestrate play f
 
 ### Prerequisites
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed and configured
+Any AI coding agent that supports custom agent definitions. See [Compatibility](#-compatibility) below.
 
 ### Installation
 
@@ -74,7 +60,7 @@ Clone the repository:
 git clone https://github.com/daudibrahimhasan/false9.git
 ```
 
-Copy the agents and commands into your Claude Code configuration:
+Copy the agents and commands into your tool's configuration directory:
 
 ```bash
 # Copy commands
@@ -88,13 +74,36 @@ That's it. No dependencies. No build step. No config files.
 
 ### Quick Start
 
-Open **any project** in Claude Code and run:
+Open **any project** in your AI coding tool and run:
 
 ```
 /f9-audit
 ```
 
 Your project will be analyzed, issues will be identified and fixed, and a comprehensive report will be generated at `false9_report.md`.
+
+---
+
+## 🔌 Compatibility
+
+False9 works with any AI coding environment that supports custom agents or system prompts.
+
+| Tool | Status | Notes |
+|:---|:---:|:---|
+| **Claude Code** | ✅ | Native support — drop-in `.claude/` directory |
+| **Cursor** | ✅ | Use as custom agent instructions via `.cursorrules` or agent config |
+| **VS Code / GitHub Copilot** | ✅ | Load agents as custom instructions or workspace prompts |
+| **Codex** | ✅ | Pass agent definitions as system prompts |
+| **Codex Plugin** | ✅ | Compatible with plugin agent architecture |
+| **CodeBuddy** | ✅ | Import agent markdown files as custom personas |
+| **Gemini** | ✅ | Use with Gemini Code Assist or custom agent configs |
+| **Kiro** | ✅ | Load as agent specifications |
+| **OpenCode** | ✅ | Compatible with custom agent definitions |
+| **Qwen** | ✅ | Pass agent prompts as system instructions |
+| **Trae** | ✅ | Use as custom AI agent configurations |
+| **Zed** | ✅ | Load via assistant configuration |
+
+> **Note:** The `.claude/` directory structure is the canonical format. Most tools can consume these markdown files directly or with minimal adaptation.
 
 ---
 
@@ -118,46 +127,50 @@ Everything in audit mode, plus **intent reconstruction**. The Manager analyzes y
 
 ---
 
+<div align="center">
+
 ## ⚙️ How It Works
 
 ```
-                          ┌─────────────────────┐
-                          │     /f9-audit or     │
-                          │     /f9-complete     │
-                          └──────────┬──────────┘
-                                     │
-                          ┌──────────▼──────────┐
-                          │   Manager (#1)       │
-                          │   Project Recon      │
-                          │   Stack Detection    │
-                          │   Intent Map*        │
-                          └──────────┬──────────┘
-                                     │
-               ┌─────────────────────┼─────────────────────┐
-               │                     │                     │
-     ┌─────────▼──────┐   ┌─────────▼──────┐   ┌─────────▼──────┐
-     │ Code Quality   │   │ Backend        │   │ Database       │
-     │ Security       │   │ Frontend       │   │ Performance    │
-     │ Testing        │   │ LLM Validator  │   │ DevOps         │
-     │ Innovation     │   │                │   │                │
-     └─────────┬──────┘   └─────────┬──────┘   └─────────┬──────┘
-               │                     │                     │
-               └─────────────────────┼─────────────────────┘
-                                     │
-                          ┌──────────▼──────────┐
-                          │  Synthesizer (#12)   │
-                          │  Cross-reference     │
-                          │  Verify fixes        │
-                          │  Generate report     │
-                          └──────────┬──────────┘
-                                     │
-                          ┌──────────▼──────────┐
-                          │  false9_report.md    │
-                          │  Terminal Scorecard  │
-                          └─────────────────────┘
+               ┌─────────────────────┐
+               │     /f9-audit or     │
+               │     /f9-complete     │
+               └──────────┬──────────┘
+                          │
+               ┌──────────▼──────────┐
+               │   Manager (#1)       │
+               │   Project Recon      │
+               │   Stack Detection    │
+               │   Intent Map*        │
+               └──────────┬──────────┘
+                          │
+    ┌─────────────────────┼─────────────────────┐
+    │                     │                     │
+┌───▼────────────┐ ┌──────▼─────────┐ ┌─────────▼──────┐
+│ Code Quality   │ │ Backend        │ │ Database       │
+│ Security       │ │ Frontend       │ │ Performance    │
+│ Testing        │ │ LLM Validator  │ │ DevOps         │
+│ Innovation     │ │                │ │                │
+└───┬────────────┘ └──────┬─────────┘ └─────────┬──────┘
+    │                     │                     │
+    └─────────────────────┼─────────────────────┘
+                          │
+               ┌──────────▼──────────┐
+               │  Synthesizer (#12)   │
+               │  Cross-reference     │
+               │  Verify fixes        │
+               │  Generate report     │
+               └──────────┬──────────┘
+                          │
+               ┌──────────▼──────────┐
+               │  false9_report.md    │
+               │  Terminal Scorecard  │
+               └─────────────────────┘
 
-                          * Intent Map is --complete mode only
+         * Intent Map is --complete mode only
 ```
+
+</div>
 
 ### Phase 1 — Recon
 
@@ -246,24 +259,63 @@ The full report (`false9_report.md`) includes:
 ```
 false9/
 ├── README.md
-└── .claude/
-    ├── commands/
-    │   ├── f9-audit.md          # Trigger audit mode
-    │   └── f9-complete.md       # Trigger complete mode
-    └── agents/
-        ├── f9-manager.md        # The Brain — orchestration & recon
-        ├── f9-code-quality.md   # Code Quality Judge
-        ├── f9-backend.md        # Backend Engineer
-        ├── f9-database.md       # Database Specialist
-        ├── f9-security.md       # Security Guard
-        ├── f9-frontend.md       # Frontend Architect
-        ├── f9-performance.md    # Performance Beast
-        ├── f9-testing.md        # Testing Captain
-        ├── f9-llm-validator.md  # LLM Validator
-        ├── f9-devops.md         # DevOps Engineer
-        ├── f9-innovation.md     # Innovation Consultant
-        └── f9-synthesizer.md    # Synthesizer — final report
+├── LICENSE
+├── .cursorrules                  # Cursor rules file
+│
+├── .claude/                      # Claude Code (canonical)
+│   ├── commands/
+│   │   ├── f9-audit.md
+│   │   └── f9-complete.md
+│   └── agents/
+│       ├── f9-manager.md         # The Brain — orchestration & recon
+│       ├── f9-code-quality.md    # Code Quality Judge
+│       ├── f9-backend.md         # Backend Engineer
+│       ├── f9-database.md        # Database Specialist
+│       ├── f9-security.md        # Security Guard
+│       ├── f9-frontend.md        # Frontend Architect
+│       ├── f9-performance.md     # Performance Beast
+│       ├── f9-testing.md         # Testing Captain
+│       ├── f9-llm-validator.md   # LLM Validator
+│       ├── f9-devops.md          # DevOps Engineer
+│       ├── f9-innovation.md      # Innovation Consultant
+│       └── f9-synthesizer.md     # Synthesizer — final report
+│
+├── .cursor/                      # Cursor
+│   ├── agents/
+│   └── commands/
+├── .codex/                       # Codex / Codex Plugin
+│   ├── AGENTS.md
+│   ├── agents/
+│   └── commands/
+├── .codebuddy/                   # CodeBuddy
+│   ├── agents/
+│   └── commands/
+├── .gemini/                      # Gemini
+│   ├── agents/
+│   └── commands/
+├── .github/                      # VS Code / GitHub Copilot
+│   ├── copilot-instructions.md
+│   └── copilot/
+├── .kiro/                        # Kiro
+│   ├── agents/
+│   └── commands/
+├── .opencode/                    # OpenCode
+│   ├── agents/
+│   └── commands/
+├── .qwen/                        # Qwen
+│   ├── agents/
+│   └── commands/
+├── .trae/                        # Trae
+│   ├── agents/
+│   └── commands/
+├── .vscode/                      # VS Code settings
+│   └── settings.json
+└── .zed/                         # Zed
+    ├── agents/
+    └── commands/
 ```
+
+> **All tool directories contain the same 12 agents and 2 commands.** The `.claude/` directory is the canonical source. All others are mirrored copies in the format each tool expects.
 
 ---
 
@@ -323,7 +375,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 <div align="center">
 
-**False9** — *No fixed position. Reviews everything.*
+**False9** — *The dream team you never had.*
 
 Built by [Daud Ibrahim Hasan](https://github.com/daudibrahimhasan)
 

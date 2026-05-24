@@ -1,0 +1,4 @@
+{
+  "false9.agentsPath": ".vscode/agents",
+  "false9.description": "False9 multi-agent audit and completion system. Load agent definitions from .github/copilot/ as custom instructions for GitHub Copilot Chat."
+}
