@@ -107,6 +107,29 @@ False9 works with any AI coding environment that supports custom agents or syste
 
 > **Note:** The `.claude/` directory structure is the canonical format. Most tools can consume these markdown files directly or with minimal adaptation.
 
+### 📖 How to Load & Use Them
+
+Depending on which AI tool you are using, False9 will load automatically or can be manually referenced:
+
+*   **Claude Code**:
+    *   **How it works**: Auto-detects the `.claude/` directory at your project root.
+    *   **To run**: Type `/f9-audit` or `/f9-complete` directly in the Claude Code terminal.
+*   **Cursor**:
+    *   **How it works**: Uses the `.cursorrules` file at the root to guide the model.
+    *   **To run**: Open Cursor Chat or Composer (`Ctrl+L` / `Ctrl+I`) and mention an agent file (e.g., `"audit with @.cursor/agents/f9-security.md"`).
+*   **VS Code / GitHub Copilot**:
+    *   **How it works**: Copilot Chat automatically reads the workspace instructions in `.github/copilot-instructions.md`.
+    *   **To run**: In the chat panel, reference any specific agent file using the `#file` or `@file` selector (e.g., `"refer to #.github/copilot/f9-performance.md"`).
+*   **Codex / Codex Plugin**:
+    *   **How it works**: Looks for rules defined in `.codex/AGENTS.md`.
+    *   **To run**: Load the agent templates from `.codex/agents/` to configure the system instructions.
+*   **Zed**:
+    *   **How it works**: Uses instructions in `.zed/`.
+    *   **To run**: Paste or refer the assistant panel to the agent prompts in `.zed/agents/` to assign roles.
+*   **Gemini / Trae / CodeBuddy / Kiro / OpenCode / Qwen**:
+    *   **How it works**: Specialized dot-folders (`.gemini/`, `.trae/`, etc.) mirror the agent personas.
+    *   **To run**: Import the corresponding agent markdown file from the tool's folder as a custom persona, custom prompt, or system instruction in your tool's settings.
+
 ---
 
 ## 🎯 Execution Modes
